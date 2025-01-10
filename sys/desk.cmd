@@ -30,6 +30,8 @@ echo= # Programs #
 echo= '*'*'*'*'*'*
 echo=
 echo= 1    EZ CALC
+echo= 2   Terminal [COMING SOON]
+echo= 3    Notepad [COMING SOON]
 echo= 0     Return
 echo=
 set /p "opt=: "
@@ -61,12 +63,15 @@ echo= *'*'*'*'*'*'*'*
 echo= # Local Users #
 echo= '*'*'*'*'*'*'*'
 echo=
-echo= 1    My Account [COMING SOON]
+echo= 1    My Account
 echo= 2   Other Users [COMING SOON]
 echo= 0        Return
 echo=
 set /p "opt=: "
-if %opt% == 1 goto my
+if %opt% == 1 (
+
+goto 
+)
 if %opt% == 0 goto sys
 goto sys
 
@@ -94,21 +99,23 @@ echo= *'*'*'*'*'*'*'*'*
 echo= # System Colors #
 echo= '*'*'*'*'*'*'*'*'
 echo=
-echo= 1            Dark [DEFAULT]
-echo= 2           Light
-echo= 3          Hacker
-echo= 4      Hacker Alt
-echo= 5        Midnight
-echo= 6   Custom Scheme
+echo= 1   Custom Scheme
+echo= 2            Dark [DEFAULT]
+echo= 3           Light
+echo= 4          Hacker
+echo= 5      Hacker Alt
+echo= 6          Forest
+echo= 7        Midnight
 echo= 0          Return
 echo=
 set /p "opt=: "
-if %opt% == 1 set "c=0f" & goto syscc
-if %opt% == 2 set "c=f0" & goto syscc
-if %opt% == 3 set "c=0a" & goto syscc
-if %opt% == 4 set "c=fa" & goto syscc
-if %opt% == 5 set "c=09" & goto syscc
-if %opt% == 6 (
+if %opt% == 2 set "c=0f" & goto syscc
+if %opt% == 3 set "c=f0" & goto syscc
+if %opt% == 4 set "c=0a" & goto syscc
+if %opt% == 5 set "c=fa" & goto syscc
+if %opt% == 6 set "c=02" & goto syscc
+if %opt% == 7 set "c=09" & goto syscc
+if %opt% == 1 (
 	set /p "c=Color Code: "
 	goto syscc
 )
