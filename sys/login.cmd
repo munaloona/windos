@@ -45,7 +45,8 @@ for /f "delims=," %%A in (sys\mem\id_global) do (
 	setlocal disabledelayedexpansion
 )
 >> sys\mem\users.csv echo %id_global%,2,%name%,%pass%
-mkdir usr\local\%name% && mkdir usr\local\%name%\documents & mkdir usr\local\%name%\downloads & mkdir usr\local\%name%\pref
+mkdir usr\local\%name% & mkdir usr\local\%name%\bin & mkdir usr\local\%name%\sbin & mkdir usr\local\%name%\pref
+mkdir home\%name% & mkdir home\%name%\documents & mkdir home\%name%\downloads
 <nul set /p "= 0f" > usr\local\%name%\pref\sysc
 
 cd sys\mem

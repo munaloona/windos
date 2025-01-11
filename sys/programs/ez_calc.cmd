@@ -5,7 +5,6 @@ for /f "tokens=1-2 delims=," %%a in (sys\programs\program_data\ez_calc\last.csv)
 	set "res=%%a = %%b"
 )
 cls
-echo=
 echo= %res%
 echo=
 type sys\programs\program_data\ez_calc\.title
